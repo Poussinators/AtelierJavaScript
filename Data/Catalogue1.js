@@ -14,13 +14,13 @@ var catalog =[
     {
         "name" : "Chaussure à talon",
         "description" : "Un paire de chaussure à talon Licorne",
-        "image" : "../Images/chaussre.jpg",
+        "image" : "../Images/chaussure.jpg",
         "price" : "39.99"
     },
     {
         "name" : "Déguisement",
         "description" : "Un déguisement Licorne",
-        "image" : "../Images/deguisement",
+        "image" : "../Images/deguisement.jpg",
         "price" : "44.99"
     },
     {
