@@ -112,6 +112,26 @@ header {
     font-size: 1em;
 }
 
+
+/* .articleOverlay {
+    height: 300px;
+    width: 300px;
+    background-color: rgba(255, 105, 180, 0.479);
+} */
+
+.articleOverlay {
+    height: 0px;
+    width: 300px;
+}
+
+.articleOverlayInner {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    background-color: rgba(0, 255, 255, 0.75);
+    bottom: 300px;
+}
+
 #panier {
     display: flex;
     flex: 1;
