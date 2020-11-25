@@ -1,3 +1,8 @@
+@font-face {
+    font-family: CevicheOne;
+    src: url(./Fonts/CevicheOne-Regular.otf);
+}
+
 html body {
     margin: 0;
     padding: 0;
@@ -10,10 +15,32 @@ html body {
 }
 
 header {
-    background-color: yellow;
+    /* background-color: yellow; */
     /* background-color: grey; */
+    background-image: repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.05) 0px, rgba(0, 0, 0, 0.05) 2px, transparent 2px, transparent 4px), linear-gradient(90deg, rgb(255, 52, 154), rgb(0, 162, 255));
     /* flex: 1; */
+    /* background-image: url("./Images/RainbowUnicornBanner.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
     height: 10vh;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 5em;
+}
+
+header h1 {
+    font-family: CevicheOne;
+    font-weight: bold;
+    position: relative;
+    left: 30px;
+    font-size: 1em;
+}
+
+header h1 span {
+    font-size: 0.8em;
 }
 
 #main {
@@ -116,7 +143,7 @@ header {
 .articleAjouterButtonContainer {
     /* background-color: hotpink; */
     flex: 1;
-    width: 100%;
+    width: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -190,6 +217,6 @@ header {
 #panier {
     display: flex;
     flex: 1;
-    background-color: magenta;
-    /* background-color: grey; */
+    /* background-color: magenta; */
+    background-color: grey;
 }
