@@ -1,1 +1,1 @@
-# AtelierJavaScrpit
+# AtelierJavaScript
