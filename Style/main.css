@@ -3,6 +3,16 @@
     src: url(./Fonts/CevicheOne-Regular.otf);
 }
 
+@font-face {
+    font-family: PermanentMarker;
+    src: url(./Fonts/PermanentMarker.ttf);
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(./Fonts/Poppins-Medium.otf);
+}
+
 html body {
     margin: 0;
     padding: 0;
@@ -12,6 +22,7 @@ html body {
     display: flex;
     flex-flow: column;
     overflow-x: hidden;
+    font-family: Poppins;
 }
 
 header {
@@ -57,6 +68,8 @@ header h1 span {
     flex: 3;
     max-height: 96.66vh;
     flex-flow: column;
+    justify-content: center;
+    align-items: center;
     background-color: #dfdfdf;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -64,12 +77,14 @@ header h1 span {
 
 .boutiqueContainer {
     /* background-color: red; */
-    margin: 3%;
+    margin: 3% 0 3% 0;
     display: flex;
-    width: 94%;
+    max-width: 94%;
+    min-width: min-content;
     flex-flow: row;
     align-items: flex-start;
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    justify-content: flex-start;
     flex-wrap: wrap;
     min-height: 10px;
 }
@@ -82,14 +97,15 @@ header h1 span {
     width: 300px;
     height: 300px;
     /* border: black 2px solid; */
-    margin: 5px;
+    /* margin: 5px; */
+    margin: 15px;
     border-radius: 1%;
     box-shadow: 8px 8px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-flow: column;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 3%;
+    /* margin-bottom: 3%; */
 }
 
 .articlePicture {
@@ -123,9 +139,13 @@ header h1 span {
     justify-content: space-between;
 }
 
+.articleAjouterBox img {
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
 .articleAjouterBoxPrint {
     /* background-color: turquoise; */
-    flex: 2;
+    /* flex: 2; */
     width: 100%;
     padding: 12px;
 }
@@ -134,19 +154,31 @@ header h1 span {
     font-style: italic;
     color: grey;
     font-weight: bold;
+    font-size: 0.8em;
+    position: relative;
+    top: 2px;
+}
+
+.articleAjouterDescription {
+    width: 140px;
+    padding-left: 10px;
+    font-size: 0.9em;
 }
 
 .articleAjouterBoxPrint input {
     width: 126px;
+    border-radius: 0;
+    font-family: Poppins!important;
 }
 
 .articleAjouterButtonContainer {
     /* background-color: hotpink; */
-    flex: 1;
+    /* flex: 1; */
     width: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 60px;
 }
 
 .articleAjouterButton {
@@ -184,6 +216,7 @@ header h1 span {
     justify-content: space-between;
     width: 100%;
     height: 100px;
+    font-family: PermanentMarker;
 }
 
 .articleTextTop {
@@ -197,21 +230,16 @@ header h1 span {
 }
 
 .articleNom {
-    font-size: 1.8em;
+    font-size: 2em;
     font-weight: 900;
+    transform: rotate(-4deg);
+    position: relative;
+    top: 5px;
 }
 
 .articlePrix {
-    font-size: 1.6em;
+    font-size: 1.5em;
     color: grey;
-}
-
-.articleTextBottom {
-    width: 100%;
-}
-
-.articleDescription {
-    font-size: 1em;
 }
 
 #panier {

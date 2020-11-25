@@ -24,6 +24,9 @@
                     </div>
                     <input type="text" class="quant" name="quantite" value="1">
                 </div>
+                <div class="articleAjouterDescription">
+                    {{desc}}
+                </div>
                 <div class="articleAjouterButtonContainer">
                     <div class="articleAjouterButton" onclick="alert('Ajout au panier !')">
                         Ajouter au
@@ -36,9 +39,6 @@
             <div class="articleTextTop">
                 <div class="articleNom">{{nom}}</div>
                 <div class="articlePrix">${{prix}}</div>
-            </div>
-            <div class="articleTextBottom">
-                <div class="articleDescription">{{desc}}</div>
             </div>
         </div>
     </div>
