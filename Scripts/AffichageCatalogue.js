@@ -7,18 +7,12 @@ function ajouterImageCatalogue() {
 function ajouterTagImageCatalogue(element) {
     let divInner = document.createElement("div");
     divInner.classList.add("articleBox");
-    divInner.innerHTML = "<div class=\"articlePicture\">\n" +
-                    "        <img src=\""+element.image+"\" alt=\""+element.name+"\">\n" +
-                    "     </div>\n" +
-                    "     <div class=\"articleText\">\n" +
-                    "        <div class=\"articleTextTop\">\n" +
-                    "           <div class=\"articleNom\">"+element.name+"</div>\n" +
-                    "           <div class=\"articlePrix\">"+element.price+"</div>\n" +
-                    "        </div>\n" +
-                    "        <div class=\"articleTextBottom\">\n" +
-                    "           <div class=\"articleDescription\">"+element.description+"</div>\n" +
-                    "        </div>\n" +
-                    "        </div>"
+    articleModel = document.getElementsByClassName('articleBox')[0]
+    divInner.innerHTML = articleModel.innerHTML
+        .replaceAll('{{nom}}', element.name)
+        .replaceAll('{{prix}}', element.price)
+        .replaceAll('{{src}}', element.image)
+        .replaceAll('{{desc}}', element.description)
     let grandDiv = $("#boutiqueContainer");
     grandDiv.append(divInner);
 }
