@@ -14,40 +14,43 @@
 
 <body>
     <header>
-        <h1>TITRE</h1>
         <!-- TODO : Faire un truc mieux-->
+        <h1>Titre</h1>
     </header>
     <article id="main">
         <section id="boutique">
-            <div id="boutiqueContainer">
+            <div id="articleInsert" class="boutiqueContainer">
                 <div class="articleBox" style="display: none;">
                     <div class="articlePicture">
                         <img src="{{src}}" alt="{{nom}}">
                         <div class="articleAjouterBox">
-                            ACHETER
+                            <div class="articleAjouterBoxPrint">
+                                <div class="articleAjouterBoxPrintQuant">
+                                    Quantité
+                                </div>
+                                <input type="text" name="quantite" value="0">
+                            </div>
+                            <div class="articleAjouterButtonContainer">
+                                <div class="articleAjouterButton">
+                                    Ajouter au
+                                    <img src="./Style/Images/basket.svg" alt="basket.svg">
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="articleText">
                         <div class="articleTextTop">
                             <div class="articleNom">{{nom}}</div>
-                            <div class="articlePrix">{{prix}}</div>
+                            <div class="articlePrix">${{prix}}</div>
                         </div>
                         <div class="articleTextBottom">
-                            <div class="articleDescription">{{dec}}</div>
+                            <div class="articleDescription">{{desc}}</div>
                         </div>
                     </div>
-                    <!-- <div class="articleOverlay">
-                        <div class="articleOverlayInner">
-                            <div class="articleAddButton">
-                                <img src="./Style/Images/basket.svg" alt="">
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </section>
         <section id="panier">
-            panier
             <!-- TODO : Le panier-->
         </section>
     </article>

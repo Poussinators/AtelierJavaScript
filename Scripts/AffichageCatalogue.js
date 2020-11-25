@@ -13,7 +13,7 @@ function ajouterTagImageCatalogue(element) {
         .replaceAll('{{prix}}', element.price)
         .replaceAll('{{src}}', element.image)
         .replaceAll('{{desc}}', element.description)
-    let grandDiv = $("#boutiqueContainer");
+    let grandDiv = $("#articleInsert");
     grandDiv.append(divInner);
 }
 
