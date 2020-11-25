@@ -29,7 +29,6 @@ header {
     display: flex;
     flex: 3;
     max-height: 96.66vh;
-    padding-top: 3%;
     flex-flow: column;
     background-color: #dfdfdf;
     overflow-y: scroll;
@@ -38,8 +37,9 @@ header {
 
 .boutiqueContainer {
     /* background-color: red; */
+    margin: 3%;
     display: flex;
-    width: 100%;
+    width: 94%;
     flex-flow: row;
     align-items: flex-start;
     justify-content: space-around;
@@ -81,6 +81,8 @@ header {
     width: 300px;
     /* flex: 1; */
     height: auto;
+    box-shadow: 2px 2px 1.5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
 }
 
 .articleAjouterBox {
@@ -92,7 +94,6 @@ header {
     flex-flow: column;
     align-items: flex-start;
     justify-content: space-between;
-    box-shadow: -4px 0px 3px rgba(0, 0, 0, 0.1);
 }
 
 .articleAjouterBoxPrint {
@@ -102,7 +103,11 @@ header {
     padding: 12px;
 }
 
-.articleAjouterBoxPrintQuant {}
+.articleAjouterQuantLibelle {
+    font-style: italic;
+    color: grey;
+    font-weight: bold;
+}
 
 .articleAjouterBoxPrint input {
     width: 126px;
@@ -125,6 +130,14 @@ header {
     text-align: center;
     font-weight: bold;
     box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.1s;
+}
+
+.articleAjouterButton:hover {
+    transform: scale(1.05);
+    background-color: hotpink;
+    transition: transform 0.1s;
+    cursor: pointer;
 }
 
 .articleAjouterButton img {
