@@ -20,26 +20,30 @@
     <article id="main">
         <section id="boutique">
             <div id="boutiqueContainer">
-                <div class="articleBox">
+                <div class="articleBox" style="display: none;">
                     <div class="articlePicture">
-                        <img src="http://placekitten.com/250/400" alt="kittenForTests">
+                        <img src="{{src}}" alt="{{nom}}">
+                        <div class="articleAjouterBox">
+                            ACHETER
+                        </div>
                     </div>
                     <div class="articleText">
                         <div class="articleTextTop">
-                            <div class="articleNom">Petit chat mimi tro tro tro cute</div>
-                            <div class="articlePrix">$10,99</div>
+                            <div class="articleNom">{{nom}}</div>
+                            <div class="articlePrix">{{prix}}</div>
                         </div>
                         <div class="articleTextBottom">
-                            <div class="articleDescription">Desc Lorem Ipsum</div>
+                            <div class="articleDescription">{{dec}}</div>
                         </div>
                     </div>
-                    <div class="articleOverlay">
+                    <!-- <div class="articleOverlay">
                         <div class="articleOverlayInner">
-                            <!-- TODO : Ajouter bouton "ajouter au panier"-->
+                            <div class="articleAddButton">
+                                <img src="./Style/Images/basket.svg" alt="">
+                            </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
-
             </div>
         </section>
         <section id="panier">
@@ -47,10 +51,12 @@
             <!-- TODO : Le panier-->
         </section>
     </article>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script src="./Data/Catalogue1.js"></script>
+    <script src="./Scripts/AffichageCatalogue.js"></script>
+    <script src="./Scripts/Controller.js"></script>
+    <script src="./Scripts/AnimateArticles.js"></script>
 </body>
 
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-<script src="./Data/Catalogue1.js"></script>
-<script src="./Scripts/AffichageCatalogue.js"></script>
-<script src="./Scripts/Controller.js"></script>
+
 </html>

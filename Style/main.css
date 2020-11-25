@@ -64,13 +64,22 @@ header {
     /* border: tomato 1px solid; */
     overflow: hidden;
     display: flex;
+    flex-flow: row;
     align-items: center;
     justify-content: center;
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
 }
 
 .articlePicture img {
     width: 300px;
+    /* flex: 1; */
     height: auto;
+}
+
+.articleAjouterBox {
+    width: 0px;
+    background-color: red;
+    height: 100%;
 }
 
 .articleText {
@@ -128,8 +137,30 @@ header {
     position: relative;
     height: 300px;
     width: 300px;
-    background-color: rgba(0, 255, 255, 0.75);
+    /* background-color: rgba(0, 255, 255, 0.75); */
     bottom: 300px;
+    display: flex;
+    flex-flow: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.articleAddButton {
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 12px;
+    right: 12px;
+}
+
+.articleAddButton img {
+    height: 25px;
+    width: auto;
 }
 
 #panier {
