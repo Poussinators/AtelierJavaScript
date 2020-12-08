@@ -364,4 +364,5 @@ header h1 span {
     opacity: 0.5;
     transform: rotate(5deg);
     font-size: 10em;
+    z-index: 20;
 }
