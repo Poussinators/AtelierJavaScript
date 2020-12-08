@@ -7,8 +7,7 @@ function ajouterImageCatalogue() {
 function ajouterTagImageCatalogue(element) {
     let divInner = document.createElement("div");
     divInner.classList.add("articleBox");
-    articleModel = document.getElementsByClassName('articleBox')[0]
-
+    articleModel = document.getElementsByClassName('articleBox')[0];
     // Couper les descriptions trop longues
     var desc = element.description
     if (desc.length >= 50) {

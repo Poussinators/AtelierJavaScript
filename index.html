@@ -9,7 +9,10 @@
 
     <!-- <script src="./Data/Story.js"></script> -->
 
-
+    <script src="./Data/Catalogue1.js"></script>
+    <script src="./Scripts/Controller.js"></script>
+    <script src="./Scripts/GestionPanier.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
 </head>
 
 <body>
@@ -28,7 +31,7 @@
                     {{desc}}
                 </div>
                 <div class="articleAjouterButtonContainer">
-                    <div class="articleAjouterButton" onclick="alert('Ajout au panier !')">
+                    <div id="ajouterArticle" class="articleAjouterButton" onclick="AjouterArticle('{{nom}}', '{{src}}',this.parentElement.parentElement.children[0].children[1].value, {{prix}})" >
                         Ajouter au
                         <img src="./Style/Images/basket.svg" alt="basket.svg">
                     </div>
@@ -44,7 +47,7 @@
     </div>
 
     <div class="articleBoxPanier" style="display: none;">
-        {{nom}}, {{quant}}, {{prixTotal}}
+        {{src}},{{nom}}, {{quant}}, {{prixTotal}}
     </div>
 
     <header>
