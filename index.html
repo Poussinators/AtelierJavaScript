@@ -43,8 +43,21 @@
         </div>
     </div>
 
-    <div class="articleBoxPanier" style="display: none;">
-        {{nom}}, {{quant}}, {{prixTotal}}
+    <div class="articleBoxPanier">
+        <div class="panierPicture">
+            <img src="{{src}}" alt="{{nom}}">
+        </div>
+        <div class="panierText">
+            <div class="panierTextTop">
+                <div class="panierNom">{{nom}}</div>
+                <div class="panierPrix">${{prixTotal}}</div>
+            </div>
+        </div>
+        <div class="articleBoxPanierOnTop">
+            <div class="fakeBox">
+                {{quant}}
+            </div>
+        </div>
     </div>
 
     <header>
@@ -60,6 +73,9 @@
             </div>
         </section>
         <section id="panier">
+            <div id="rechercheBox">
+
+            </div>
             <div id="panierInsert">
 
             </div>

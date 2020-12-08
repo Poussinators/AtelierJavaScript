@@ -105,6 +105,7 @@ header h1 span {
     flex-flow: column;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
     /* margin-bottom: 3%; */
 }
 
@@ -245,6 +246,116 @@ header h1 span {
 #panier {
     display: flex;
     flex: 1;
+    flex-flow: column;
     /* background-color: magenta; */
-    background-color: grey;
+    background-color: #dfdfdf;
+    font-family: PermanentMarker;
+}
+
+#rechercheBox {
+    background-color: hotpink;
+    height: 125px;
+    width: 100%;
+}
+
+#panierInsert {
+    width: calc(100% - 50px);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-flow: row;
+    padding: 0 25px;
+    flex-wrap: wrap;
+}
+
+.articleBoxPanier {
+    display: flex;
+    flex-flow: column;
+    padding: 8px;
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    /* border: black 2px solid; */
+    /* margin: 5px; */
+    margin: 9px;
+    border-radius: 1%;
+    box-shadow: 8px 8px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    /* margin-bottom: 3%; */
+}
+
+.panierPicture {
+    height: 120px;
+    width: 200px;
+    /* border: tomato 1px solid; */
+    overflow: hidden;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+}
+
+.panierPicture img {
+    width: 200px;
+    /* flex: 1; */
+    height: auto;
+    box-shadow: 2px 2px 1.5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.panierText {
+    /* color: tomato; */
+    display: flex;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 66px;
+    font-family: PermanentMarker;
+}
+
+.panierTextTop {
+    display: flex;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.panierNom {
+    font-size: 1.2em;
+    font-weight: 900;
+    transform: rotate(-4deg);
+    position: relative;
+    top: 2px;
+}
+
+.panierPrix {
+    font-size: 1em;
+    color: grey;
+}
+
+.articleBoxPanierOnTop {
+    height: 0px;
+}
+
+.fakeBox {
+    height: 200px;
+    width: 300px;
+    position: relative;
+    bottom: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    transform: rotate(5deg);
+    font-size: 10em;
 }
