@@ -49,12 +49,12 @@
         divInner.classList.add("articleBoxPanier");
         articlePanierModel = document.getElementsByClassName('articleBoxPanier')[0];
     
-        var prixtotal = article.quant * article.prix;
+        var prixtotal = article.quantite * article.prix;
         console.log(prixtotal)
         divInner.innerHTML = String(articlePanierModel.innerHTML)
-            .replaceAll('{{nom}}', article.nom)
+            .replaceAll('{{nom}}', article.name)
             .replaceAll('{{prixTotal}}', prixtotal)
-            .replaceAll('{{quant}}', article.quant)
+            .replaceAll('{{quant}}', article.quantite)
             .replaceAll('{{src}}', article.image)
         let grandDiv = $("#panierInsert");
         grandDiv.append(divInner);
