@@ -252,6 +252,12 @@ header h1 span {
     font-family: PermanentMarker;
 }
 
+#panierHeader {
+    background-color: lawngreen;
+    height: 125px;
+    width: 100%;
+}
+
 #rechercheBox {
     background-color: hotpink;
     height: 125px;
