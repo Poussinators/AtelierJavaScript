@@ -7,8 +7,6 @@
     console.log(panier);
 
     function AjouterArticle(nom,image,quant,prix){
-        debugger;
-        console.log(nom, image, quant, prix);
         ContrainteAjout(nom,quant,image,prix);
         ViderPanier();
         for (var index in panier) {
@@ -23,16 +21,13 @@
             articlePanier = panier[index];
             // s'il y a déja un objet
             if(articlePanier.name == nom){
-                console.log("trouvé, article " + nom + " qut : " + quant);
                 articlePanier.quantite += quant;         
                 if(articlePanier.quantite >9){
                     articlePanier.quantite =9;
                 }       
-                console.log(articlePanier.quantite);
                 return;
             }
         }
-        console.log(panier);
         panier.push({"name":nom,"image":image,"quantite": quant,"prix":prix});
         for (var index in panier) {
             articlePanier = panier[index];
@@ -41,7 +36,6 @@
                 articlePanier.quantite =9;
             }
         }
-        console.log(panier);
     }
 
     function AfficherArticlePanier(article) {
@@ -61,5 +55,11 @@
     }
 
     function ViderPanier(){
-        $('#panierInsert').innerHTML = '';
+        debugger;
+        console.log($('#panierInsert').children());
+        for(var index in $('#panierInsert').children()){
+            var child = $('#panierInsert')[index];
+            console.log(child);
+            //child.remove();
+        }
     }
