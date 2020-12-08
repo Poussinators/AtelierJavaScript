@@ -272,6 +272,8 @@ header h1 span {
     flex-flow: row;
     padding: 0 25px;
     flex-wrap: wrap;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .articleBoxPanier {
