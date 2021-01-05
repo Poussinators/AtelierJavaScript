@@ -58,7 +58,7 @@
         </div>
         <div class="articleBoxPanierOnTop">
             <div class="fakeBox">
-                {{quant}}
+                x{{quant}}
             </div>
         </div>
     </div>
@@ -66,7 +66,7 @@
     <header>
         <!-- TODO : Faire un truc mieux-->
         <h1>Goodies-Licornes.com :
-            <span>Mettez des pailletes dans la vie d'Ines !</span>
+            <span>Mettez des pailletes dans la vie d'<a target="_blank" href="https://www.youtube.com/watch?v=UAn_3UAHuLo">Ines</a> !</span>
         </h1>
     </header>
     <article id="main">
@@ -76,12 +76,21 @@
             </div>
         </section>
         <section id="panier">
-            <div id="panierHeader">
-
-            </div>
             <div id="rechercheBox">
-
+                <div id="rechercheBoxLeft">
+                    <input type="text" name="recherche" id="recherche" placeholder="Rechercher ...">
+                </div>
+                <div id="rechercheBoxRight">
+                    <!-- <img src="http://placekitten.com/g/50/50" alt=""> -->
+                    <div id="rechercheValiderBouton">
+                        <img src="./Style/Images/search.svg" alt="">
+                    </div>
+                </div>
             </div>
+            <div id="panierHeader">
+                Total : $XXXX
+            </div>
+
             <div id="panierInsert">
 
             </div>

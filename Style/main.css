@@ -54,6 +54,11 @@ header h1 span {
     font-size: 0.8em;
 }
 
+header h1 a {
+    text-decoration: none;
+    color: black;
+}
+
 #main {
     display: flex;
     /* flex: 29; */
@@ -252,16 +257,88 @@ header h1 span {
     font-family: PermanentMarker;
 }
 
-#panierHeader {
-    background-color: lawngreen;
-    height: 125px;
+#rechercheBox {
+    /* background-color: hotpink; */
+    /* height: 125px; */
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-flow: column; */
+    padding-top: 15px;
 }
 
-#rechercheBox {
-    background-color: hotpink;
+#rechercheBoxLeft {
+    flex: 4;
+    /* background-color: teal; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5vw 0;
+}
+
+#recherche {
+    /* width: calc(100% - 30px); */
+    /* margin: 15px 0; */
+    padding: 3px;
+    font-size: large;
+    border: none;
+    width: 97%;
+    position: relative;
+    left: 2%;
+    border-radius: 4px;
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+    height: 40px;
+    transition: transform 0.1s;
+}
+
+#recherche:focus {
+    /* outline: 1px solid grey; */
+    outline: none;
+    box-shadow: 4px 6px 2px rgba(0, 0, 0, 0.1);
+    transform: scale(1.01);
+    transition: transform 0.1s;
+}
+
+#rechercheBoxRight {
+    flex: 1;
+    /* background-color: tomato; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#rechercheValiderBouton {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+    height: 47px;
+    width: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.1s;
+}
+
+#rechercheValiderBouton:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.1s;
+}
+
+#rechercheValiderBouton img {
+    height: 37px;
+}
+
+#panierHeader {
+    /* background-color: lawngreen;
     height: 125px;
-    width: 100%;
+    width: 100%; */
+    border-top: grey 1px solid;
+    border-bottom: grey 1px solid;
+    padding: 5px;
+    font-size: 1.2em;
+    margin: 15px 10px;
 }
 
 #panierInsert {
