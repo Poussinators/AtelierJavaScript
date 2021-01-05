@@ -1,65 +1,73 @@
-    var catalogue =[]
-    var panier=[]
-    catalog.forEach(element => {
-        catalogue.push(element);
-    });
-    console.log(catalogue);
-    console.log(panier);
+// var Globale
+var panier=[]
 
-    function AjouterArticle(nom,image,quant,prix){
-        ContrainteAjout(nom,quant,image,prix);
-        ViderPanier();
-        for (var index in panier) {
-            articlePanier = panier[index];
-            // s'il y a déja un objet
-            AfficherArticlePanier(articlePanier);
-        }
+function AjouterArticle(nom,image,quant,prix){
+    // Verif de la limite de 9 articles
+    AjoutPanier(nom,quant,image,prix);
+    
+    ViderPanier();
+    // Pour chaque article on l'afficheche dans le panier
+    for (var index in panier) {
+        articlePanier = panier[index];
+        AfficherArticlePanier(articlePanier);
     }
     
-    function ContrainteAjout(nom,quant,image,prix){
-        for (var index in panier) {
-            articlePanier = panier[index];
-            // s'il y a déja un objet
-            if(articlePanier.name == nom){
-                articlePanier.quantite += quant;         
-                if(articlePanier.quantite >9){
-                    articlePanier.quantite =9;
-                }       
-                return;
-            }
-        }
-        panier.push({"name":nom,"image":image,"quantite": quant,"prix":prix});
-        for (var index in panier) {
-            articlePanier = panier[index];
-            // s'il y a déja un objet
+}
+
+function AjoutPanier(nom,quant,image,prix){
+    var existeDeja = false;
+    for (var index in panier) {
+        articlePanier = panier[index];
+        // en cas d'article déjà existant on change juste la quantité (<=9) et on stop la ftc 
+        if(articlePanier.name == nom){
+            articlePanier.quantite += quant;    
             if(articlePanier.quantite >9){
                 articlePanier.quantite =9;
-            }
+            }     
+            return;
         }
     }
+    // S'il l'article n'existe pas on le crée
+    panier.push({"name":nom,"image":image,"quantite": quant,"prix":prix});
+    for (var index in panier) {
+        articlePanier = panier[index];
+        if(articlePanier.quantite >9){
+            articlePanier.quantite =9;
+        }
+    }
+}
 
-    function AfficherArticlePanier(article) {
-        var divInner = document.createElement("div");
-        divInner.classList.add("articleBoxPanier");
-        articlePanierModel = document.getElementsByClassName('articleBoxPanier')[0];
+function AfficherArticlePanier(article) {
+    var grandDiv = $("#panierInsert");
+    // Création de la div
+    var divInner = document.createElement("div");
+    divInner.classList.add("articleBoxPanier");
     
-        var prixtotal = article.quantite * article.prix;
-        console.log(prixtotal)
-        divInner.innerHTML = String(articlePanierModel.innerHTML)
-            .replaceAll('{{nom}}', article.name)
-            .replaceAll('{{prixTotal}}', prixtotal)
-            .replaceAll('{{quant}}', article.quantite)
-            .replaceAll('{{src}}', article.image)
-        let grandDiv = $("#panierInsert");
-        grandDiv.append(divInner);
-    }
+    articlePanierModel = document.getElementsByClassName('articleBoxPanier')[0];
 
-    function ViderPanier(){
-        debugger;
-        console.log($('#panierInsert').children());
-        for(var index in $('#panierInsert').children()){
-            var child = $('#panierInsert')[index];
-            console.log(child);
-            //child.remove();
-        }
+    // Affectation des variables
+    var prixtotal = article.quantite * article.prix;
+    articlePanierModel.value = prixtotal
+    articlePanierModel.titre = article.name;
+
+    // Modification du texte
+    divInner.innerHTML = String(articlePanierModel.innerHTML)
+        .replaceAll('{{nom}}', article.name)
+        .replaceAll('{{prixTotal}}', prixtotal)
+        .replaceAll('{{quant}}', article.quantite)
+        .replaceAll('{{src}}', article.image)
+    // Affichage
+    grandDiv.append(divInner);
+    divInner.addEventListener("onclick",ouii())
+}
+
+function ViderPanier(){
+    var panierDiv = document.getElementById('panierInsert');
+    while (panierDiv.firstChild) {
+        panierDiv.removeChild(panierDiv.firstChild);
     }
+}
+
+function ouii(){
+    console.log("ouiiii");
+}
