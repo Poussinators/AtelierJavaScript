@@ -86,6 +86,10 @@ function ViderAffichage() {
     }
 }
 
+function ViderPanier(){
+    panier = [];
+    ViderAffichage();
+}
 // la fonction du bonheur
 function ouii() {
     console.log("ouiiii");
