@@ -7,8 +7,7 @@ function AjouterArticle(ev, nom, image, quant, prix) {
     if (ev.target.classList.value.includes('articleAjouterButtonDisabled')) {
         return
     }
-
-    ev.target.parentElement.parentElement.children[0].children[1].value = 0
+    ev.target.parentElement.parentElement.children[0].children[1].value = 0;
     activateAjouterBouton(ev) // de AnimateArticle.js
 
     // Verif de la limite de 9 articles
@@ -47,8 +46,8 @@ function AfficherArticlesPanier() {
         var divInner = document.createElement("div");
         divInner.classList.add("articleBoxPanier");
 
-        articlePanierModel = document.getElementsByClassName('articleBoxPanier')[0];
-        
+        articlePanierModel = $('.articleBoxPanier')[0];
+
         // Affectation des variables
         var prixtotal = article.quantite * article.prix;
         prixPanier += prixtotal;
@@ -63,9 +62,6 @@ function AfficherArticlesPanier() {
         grandDiv.append(divInner);
     }
     $("#prixPanier")[0].innerHTML = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(prixPanier);
-    console.log($("#prixPanier").innerHTML);
-    console.log($("#prixPanier")[0].innerHTML);
-    console.log(prixPanier.toString());
 }
 
 function SupprimerArticle(button){

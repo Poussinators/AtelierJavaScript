@@ -67,8 +67,8 @@ function resizeHeaderFontSize() {
 // Resize boutiqueContainer en fonction de la taille de la fenêtre
 
 function resizeboutiqueContainer() {
-    var maxWidth = document.getElementById('boutique').offsetWidth
-    var width = '0px'
+    var maxWidth = document.getElementById('boutique').offsetWidth;
+    var width = '0px';
 
     // console.log(maxWidth)
 
@@ -91,21 +91,20 @@ function resizeboutiqueContainer() {
 }
 
 function activateAjouterBouton(ev) {
-    quant = ev.target.value
-    button = ev.target.parentElement.parentElement.children[2].children[0]
-
+    quant = ev.target.value;
+    button = ev.target.parentElement.parentElement.children[2].children[0];
     if (quant > 0) {
-        button.classList.value = 'articleAjouterButton'
+        button.classList.value = 'articleAjouterButton';
     } else {
-        button.classList.value = 'articleAjouterButton articleAjouterButtonDisabled'
+        button.classList.value = 'articleAjouterButton articleAjouterButtonDisabled';
     }
 
 }
 
 window.addEventListener('resize', () => {
-    resizeHeaderFontSize()
-    resizeboutiqueContainer()
+    resizeHeaderFontSize();
+    resizeboutiqueContainer();
 })
 
-resizeHeaderFontSize()
-resizeboutiqueContainer()
+resizeHeaderFontSize();
+resizeboutiqueContainer();
