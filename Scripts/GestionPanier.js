@@ -8,6 +8,9 @@ function AjouterArticle(ev, nom, image, quant, prix) {
         return
     }
 
+    ev.target.parentElement.parentElement.children[0].children[1].value = 0
+    activateAjouterBouton(ev) // de AnimateArticle.js
+
     // Verif de la limite de 9 articles
     AjoutPanier(nom, quant, image, prix);
 
@@ -45,7 +48,7 @@ function AfficherArticlesPanier() {
         divInner.classList.add("articleBoxPanier");
 
         articlePanierModel = document.getElementsByClassName('articleBoxPanier')[0];
-
+        
         // Affectation des variables
         var prixtotal = article.quantite * article.prix;
         prixPanier += prixtotal;
