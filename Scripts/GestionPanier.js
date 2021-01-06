@@ -8,6 +8,8 @@ function AjouterArticle(ev, nom, image, quant, prix) {
         return
     }
 
+    ev.target.parentElement.parentElement.children[0].children[1].value = 0
+
     // Verif de la limite de 9 articles
     AjoutPanier(nom, quant, image, prix);
 
