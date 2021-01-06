@@ -7,12 +7,6 @@
 
     <title>goodies-licornes.com</title>
 
-    <!-- <script src="./Data/Story.js"></script> -->
-
-    <script src="./Data/Catalogue1.js"></script>
-    <script src="./Scripts/Controller.js"></script>
-    <script src="./Scripts/GestionPanier.js"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
 </head>
 
 <body>
@@ -25,13 +19,13 @@
                     <div class="articleAjouterQuantLibelle">
                         Quantité
                     </div>
-                    <input type="text" class="quant" name="quantite" value="0" onchange="activateAjouterBouton(event)">
+                    <input type="text" class="quant" name="quantite" value="1" onchange="activateAjouterBouton(event)">
                 </div>
                 <div class="articleAjouterDescription">
                     {{desc}}
                 </div>
                 <div class="articleAjouterButtonContainer">
-                    <div id="ajouterArticle" class="articleAjouterButton articleAjouterButtonDisabled" onclick="AjouterArticle(event, '{{nom}}', '{{src}}',parseInt(this.parentElement.parentElement.children[0].children[1].value), {{prix}})">
+                    <div id="ajouterArticle" class="articleAjouterButton" onclick="AjouterArticle(event, '{{nom}}', '{{src}}',parseInt(this.parentElement.parentElement.children[0].children[1].value), {{prix}})">
                         Ajouter au
                         <img src="./Style/Images/basket.svg" alt="basket.svg">
                     </div>
@@ -53,7 +47,7 @@
         <div class="panierText">
             <div class="panierTextTop">
                 <div class="panierNom">{{nom}}</div>
-                <div class="panierPrix">${{prixTotal}}</div>
+                <div class="panierPrix">{{prixTotal}}</div>
             </div>
         </div>
         <div class="articleBoxPanierOnTop">
@@ -63,7 +57,7 @@
         </div>
         <div class="articleBoxPanierOnTop">
             <div class="fakeBox2">
-                <div class="trashButton" onclick="alert('TODO : Supprimer l\'article du panier !')">
+                <div class="trashButton" onclick=SupprimerArticle(this)>
                     X
                 </div>
             </div>
@@ -90,12 +84,13 @@
                 <div id="rechercheBoxRight">
                     <!-- <img src="http://placekitten.com/g/50/50" alt=""> -->
                     <div id="rechercheValiderBouton">
-                        <img src="./Style/Images/search.svg" alt="">
+                        <img src="./Style/Images/search.svg" alt="" >
                     </div>
                 </div>
             </div>
             <div id="panierHeader">
-                Total : $XXXX
+                Total : 
+                <span id="prixPanier">$0.00</span>
             </div>
 
             <div id="panierInsert">
@@ -104,12 +99,11 @@
         </section>
     </article>
 
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./Scripts/GestionPanier.js"></script>
     <script src="./Data/Catalogue1.js"></script>
     <script src="./Scripts/AffichageCatalogue.js"></script>
     <script src="./Scripts/Controller.js"></script>
     <script src="./Scripts/AnimateArticles.js"></script>
 </body>
-
-
 </html>

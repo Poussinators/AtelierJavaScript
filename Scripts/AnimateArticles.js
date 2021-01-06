@@ -100,8 +100,6 @@ function activateAjouterBouton(ev) {
         button.classList.value = 'articleAjouterButton articleAjouterButtonDisabled'
     }
 
-    console.log('quant :', quant)
-    console.log('button :', button)
 }
 
 window.addEventListener('resize', () => {
