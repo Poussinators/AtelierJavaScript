@@ -82,11 +82,11 @@
         <section id="panier">
             <div id="rechercheBox">
                 <div id="rechercheBoxLeft">
-                    <input type="text" name="recherche" id="recherche" placeholder="Rechercher ...">
+                    <input type="text" name="recherche" id="recherche" placeholder="Rechercher ..." onchange="Rechercher()" onkeyup="Rechercher()" onkeypress="Rechercher()">
                 </div>
                 <div id="rechercheBoxRight">
                     <!-- <img src="http://placekitten.com/g/50/50" alt=""> -->
-                    <div id="rechercheValiderBouton">
+                    <div id="rechercheValiderBouton" >
                         <img src="./Style/Images/search.svg" alt="">
                     </div>
                 </div>
@@ -119,6 +119,7 @@
     <script src="./Scripts/AffichageCatalogue.js"></script>
     <script src="./Scripts/Controller.js"></script>
     <script src="./Scripts/AnimateArticles.js"></script>
+    <script src="./Scripts/BarreRecherche.js"></script>
 </body>
 
 </html>
