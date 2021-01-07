@@ -15,10 +15,10 @@ function ajouterTagImageCatalogue(element) {
     }
 
     divInner.innerHTML = String(articleModel.innerHTML)
-        .replaceAll('{{nom}}', element.name)
-        .replaceAll('{{prix}}', element.price)
-        .replaceAll('{{src}}', element.image)
-        .replaceAll('{{desc}}', desc)
+        .replace(/{{nom}}/g, element.name)
+        .replace(/{{prix}}/g, element.price)
+        .replace(/{{src}}/g, element.image)
+        .replace(/{{desc}}/g, desc);
     let grandDiv = $("#articleInsert");
     grandDiv.append(divInner);
 }
