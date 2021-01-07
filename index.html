@@ -19,13 +19,13 @@
                     <div class="articleAjouterQuantLibelle">
                         Quantité
                     </div>
-                    <input type="text" class="quant" name="quantite" value="1" onchange="activateAjouterBouton(event)" onkeypress="activateAjouterBouton(event)">
+                    <input type="text" class="quant" name="quantite" value="0" onchange="activateAjouterBouton(event)" onkeypress="activateAjouterBouton(event)">
                 </div>
                 <div class="articleAjouterDescription">
                     {{desc}}
                 </div>
                 <div class="articleAjouterButtonContainer">
-                    <div id="ajouterArticle" class="articleAjouterButton" onclick="AjouterArticle(event, '{{nom}}', '{{src}}',parseInt(this.parentElement.parentElement.children[0].children[1].value), {{prix}})">
+                    <div id="ajouterArticle" class="articleAjouterButton articleAjouterButtonDisabled" onclick="AjouterArticle(event, '{{nom}}', '{{src}}',parseInt(this.parentElement.parentElement.children[0].children[1].value), {{prix}})">
                         Ajouter au
                         <img src="./Style/Images/basket.svg" alt="basket.svg">
                     </div>
@@ -84,12 +84,12 @@
                 <div id="rechercheBoxRight">
                     <!-- <img src="http://placekitten.com/g/50/50" alt=""> -->
                     <div id="rechercheValiderBouton">
-                        <img src="./Style/Images/search.svg" alt="" >
+                        <img src="./Style/Images/search.svg" alt="">
                     </div>
                 </div>
             </div>
             <div id="panierHeader">
-                Total : 
+                Total :
                 <span id="prixPanier">$0.00</span>
             </div>
 
@@ -106,4 +106,5 @@
     <script src="./Scripts/Controller.js"></script>
     <script src="./Scripts/AnimateArticles.js"></script>
 </body>
+
 </html>
