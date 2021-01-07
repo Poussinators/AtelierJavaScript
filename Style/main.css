@@ -528,3 +528,38 @@ header h1 a {
     font-size: 30px;
     /* -webkit-text-stroke: 1px #00c1da; */
 }
+
+.epic {
+    /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab), ; */
+    /* background: url("./Style/Images/Epic_sax_guy.gif"), linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab), ; */
+    background-image: url("./Images/Epic_sax_guy.gif");
+    /* background-size: 400% 400%; */
+    animation: gradient 5s ease infinite, 0.5s apear;
+    background-size: 73vh;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes apear {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
