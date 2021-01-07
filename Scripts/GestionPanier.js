@@ -54,28 +54,32 @@ function AfficherArticlesPanier() {
         prixtotal = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(prixtotal);
         // Modification du texte
         divInner.innerHTML = String(articlePanierModel.innerHTML)
-            .replaceAll('{{nom}}', article.name)
-            .replaceAll('{{prixTotal}}', prixtotal)
-            .replaceAll('{{quant}}', article.quantite)
-            .replaceAll('{{src}}', article.image)
-            // Affichage
+            // .replaceAll('{{nom}}', article.name)
+            // .replaceAll('{{prixTotal}}', prixtotal)
+            // .replaceAll('{{quant}}', article.quantite)
+            // .replaceAll('{{src}}', article.image)
+            .replace(/{{nom}}/g, article.name)
+            .replace(/{{prixTotal}}/g, prixtotal)
+            .replace(/{{src}}/g, article.image)
+            .replace(/{{quant}}/g, article.quantite);
+        // Affichage
         grandDiv.append(divInner);
     }
     $("#prixPanier")[0].innerHTML = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(prixPanier);
 }
 
-function SupprimerArticle(button){
+function SupprimerArticle(button) {
     var divLibelle = button.parentElement.parentElement.parentElement.querySelector(".panierNom");
     var LibelleArticle = divLibelle.innerHTML;
-    for (var articlePanier of panier ){
-        if (articlePanier.name == LibelleArticle){
+    for (var articlePanier of panier) {
+        if (articlePanier.name == LibelleArticle) {
             panier.delete(articlePanier);
             continue;
         }
     }
-    
+
     ViderAffichage();
-    
+
     AfficherArticlesPanier();
 }
 
@@ -86,7 +90,7 @@ function ViderAffichage() {
     }
 }
 
-function ViderPanier(){
+function ViderPanier() {
     panier = [];
     ViderAffichage();
 }
