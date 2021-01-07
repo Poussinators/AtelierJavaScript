@@ -47,14 +47,17 @@
         <div class="panierText">
             <div class="panierTextTop">
                 <div class="panierNom">{{nom}}</div>
-                <div class="panierPrix">{{prixTotal}}</div>
+                <div class="panierPrix">
+                    <div>{{prixTotal}}</div>
+                    <div>x{{quant}}</div>
+                </div>
             </div>
         </div>
-        <div class="articleBoxPanierOnTop">
+        <!-- <div class="articleBoxPanierOnTop">
             <div class="fakeBox">
                 x{{quant}}
             </div>
-        </div>
+        </div> -->
         <div class="articleBoxPanierOnTop">
             <div class="fakeBox2">
                 <div class="trashButton" onclick=SupprimerArticle(this)>
@@ -89,9 +92,20 @@
                 </div>
             </div>
             <div id="panierHeader">
-                Total :
-                <span id="prixPanier">$0.00</span>
+                <div>
+                    Total :
+                    <span id="prixPanier">$0.00</span>
+                </div>
+                <div id="supprAllBouton" onclick="ViderPanier()">
+                    Vider
+                </div>
             </div>
+
+            <!-- <div id="supprAllSection">
+                <div id="supprAllBouton" onclick="ViderPanier()">
+                    Vider
+                </div>
+            </div> -->
 
             <div id="panierInsert">
 

@@ -349,6 +349,35 @@ header h1 a {
     padding: 5px;
     font-size: 1.2em;
     margin: 15px 10px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#supprAllSection {
+    border-bottom: grey 1px solid;
+    padding: 5px 5px 10px 5px;
+    font-size: 1.2em;
+    margin: -7px 10px 15px 10px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#supprAllBouton {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+    padding: 3px 7px;
+    transition: transform 0.1s;
+}
+
+#supprAllBouton:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.1s;
 }
 
 #panierInsert {
@@ -436,6 +465,10 @@ header h1 a {
 .panierPrix {
     font-size: 1em;
     color: grey;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 .articleBoxPanierOnTop {
