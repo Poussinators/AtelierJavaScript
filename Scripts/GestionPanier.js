@@ -91,8 +91,9 @@ function ViderAffichage() {
 }
 
 function ViderPanier() {
-    panier = [];
+    panier = new Set();
     ViderAffichage();
+    $("#prixPanier")[0].innerHTML = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(0);
 }
 // la fonction du bonheur
 function ouii() {
